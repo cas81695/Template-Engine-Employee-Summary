@@ -4,12 +4,11 @@
   "description": "he application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.",
   "main": "app.js",
   "dependencies": {
+    "fs": "0.0.1-security",
     "inquirer": "^7.1.0",
     "jest": "^25.1.0"
   },
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "npm test"
   },
