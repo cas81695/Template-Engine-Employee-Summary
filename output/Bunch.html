@@ -5,38 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Bunch</title>
+    <title>The Fun Bunch</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row" style="background-color: navy; height: 130px;">
-            <p class="mx-auto my-auto" style="font-size: 40px; color: gold;">The Fun Bunch</p>
-        
-            <div class="row mt-5">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="row justify-content-center">
-    
-    <div class="card m-3 " style="width: 20rem;">
-        <div class="card-header text-white bg-primary">
-            <h3>Christian Sanchez</h3>
-            <h5>Manager</h5>
+    <header class="jumbotron jumbotron-fluid" style="background-color: navy;">
+        <div class="container">
+            <h1 class="mx-auto my-auto" style="font-size: 40px; color: gold;">The Fun Bunch</h1>
         </div>
-        <div class="card-body bg-light text-dark">
-            <ul class="list-group">
-                <li class="list-group-item" style="font-size: 14px;">ID: 1995</li>
-                <li class="list-group-item" style="font-size: 14px;">Email: christiansanchez@funbunch.com</li>
-                <li class="list-group-item" style="font-size: 14px;">Office Number: 816</li>
-            </ul>
+    </header>
+
+    <main class="container">
+        <div class="row d-flex justify-content-center" id="bunchContainer"><div class="col-md-4">
+    <div class="card bg-danger border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+        <div class="card-header text-white">
+            <h2 id="name">bob</h2>
+            <h3><span class="fas fa-skull-crossbones"></span>Manager</h3>
+        </div>
+        <div class="card-body bg-light align-content-center flex-wrap">
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="id">ID: 1 </li>
+                    <li class="list-group-item" id="email">Email: <a href="mailto:bob@funchbunch.com">bob@funchbunch.com</a> </li>
+                    <li class="list-group-item" id="property">Office: 2 </li>
+                </ul>
+            </div>
         </div>
     </div>
-    
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-    
-            </div>
-    
+</div><div class="col-md-4">
+    <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+        <div class="card-header text-white">
+            <h2 id="name">tim</h2>
+            <h3><span class="fas fa-bolt"></span>Engineer</h3>
         </div>
-    </body>
-</html>
+        <div class="card-body bg-light align-content-center flex-wrap">
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="id">ID: 2 </li>
+                    <li class="list-group-item" id="email">Email: <a href="mailto:tim@funbunch.com">tim@funbunch.com</a> </li>
+                    <li class="list-group-item" id="property">Github: tim56345 </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><div class="col-md-4">
+    <div class="card bg-success border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+        <div class="card-header text-white">
+            <h2 id="name">alice</h2>
+            <h3><span class="fas fa-air-freshener"></span> Intern</h3>
+        </div>
+        <div class="card-body bg-light align-content-center flex-wrap">
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="id">ID: 3 </li>
+                    <li class="list-group-item" id="email">Email: <a href="mailto:alice@funbunch.com">alice@funbunch.com</a> </li>
+                    <li class="list-group-item" id="property">School: ECU </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div></div></main></body></html>
