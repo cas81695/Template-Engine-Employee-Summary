@@ -1,7 +1,7 @@
 {
   "name": "template-engine-employee-summary",
   "version": "1.0.0",
-  "description": "an application that will allow you to add/view engineers and interns under a specific manage",
+  "description": "an application that will allow you to add/view engineers and interns under a specific manager",
   "main": "app.js",
   "directories": {
     "lib": "lib",
