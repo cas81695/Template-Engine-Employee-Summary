@@ -4,12 +4,12 @@ const inquirer = require("inquirer");
 
 const fs = require("fs");
 
-
 // The Lib javascript 
 
-const Manager = require("./lib/Manager");
 
 const Intern = require("./lib/Intern");
+
+const Manager = require("./lib/Manager");
 
 const Engineer = require("./lib/Engineer");
 
@@ -20,20 +20,22 @@ async function start(){
     console.log("Shall we create the fun bunch!");
 
     // Set variable to hold HTML
+
     let bunchHTML = "";
 
     // Variable to hold number of group members
+
     let bunchSize;
 
     // First Question to ask to set up loop
+
     await inquirer.prompt(
         {
             type: "number",
             message: "How many people are in the bunch?",
             name: "noOfBunchMem"
         }
-    )
-    .then((data) => {
+    ).then((data) => {
 
         // Number of group members placed in bunchSize.
 
@@ -82,8 +84,7 @@ async function start(){
                 name: "title",
                 choices: ["Engineer", "Intern", "Manager"]
             }
-        ])
-        .then((data) => {
+        ]).then((data) => {
 
             // Takes data from user and places value in let variables
 
@@ -95,6 +96,7 @@ async function start(){
         });
 
         // Switch Case depending on the title of the employee
+
         switch (title){
             case "Manager":
 
@@ -105,8 +107,7 @@ async function start(){
                         message: "What is your Manager's Office Number?",
                         name: "officeNo"
                     }
-                ])
-                .then((data) => {
+                ]).then((data) => {
 
                     // Create a new object with all avaiable user input data
 
@@ -114,10 +115,12 @@ async function start(){
 
                     // Reads and places HTML from manager.html in the bunchMember variable
 
-                    bunchMember = fs.readFileSync("templates/Manager.html");
+                    bunchMember = fs.readFileSync("templates/manager.html");
 
                     // Uses eval() to pass template literals from html files.
+
                     // Adds the string to the team HTML.
+
                     bunchHTML = bunchHTML + "\n" + eval('`'+ bunchMember +'`');
                 });
                 break;
@@ -131,11 +134,11 @@ async function start(){
                         message: "What school is your Intern attending?",
                         name: "school"
                     }
-                ])
-                .then((data) => {
+                ]).then((data) => {
+
                     const intern = new Intern(name, id, email, data.school);
 
-                    bunchMember = fs.readFileSync("templates/Intern.html");
+                    bunchMember = fs.readFileSync("templates/intern.html");
 
                     bunchHTML = bunchHTML + "\n" + eval('`'+ bunchMember +'`');
                 });
@@ -150,8 +153,8 @@ async function start(){
                         message: "What is your Engineer's GitHub?",
                         name: "github"
                     }
-                ])
-                .then((data) => {
+                ]).then((data) => {
+
                     const engineer = new Engineer(name, id, email, data.github);
 
                     bunchMember = fs.readFileSync("templates/engineer.html");
@@ -165,16 +168,16 @@ async function start(){
 
     } 
 
-    // Reads the Employee.html and places the html in a variable
+    // Reads the main.html and places the html in a variable
 
-    const employeeHTML = fs.readFileSync("templates/Employee.html");
+    const mainHTML = fs.readFileSync("templates/main.html");
     
 
-    bunchHTML = eval('`'+ employeeHTML +'`');
+    bunchHTML = eval('`'+ mainHTML +'`');
 
     // write file to new Bunch.html file
 
-    fs.writeFile("output/Bunch.html", bunchHTML, function(err) {
+    fs.writeFile("output/bunch.html", bunchHTML, function(err) {
 
         if (err) {
           return console.log(err);
@@ -183,8 +186,5 @@ async function start(){
         console.log("Success!");
       
       });
-
 }
-
-
 start();
